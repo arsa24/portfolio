@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  top: 0;
+}
+
+header .nav {
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav .nav-content {
+  display: flex;
+  list-style: none;
+}
+header .nav .nav-content li a {
+  text-decoration: none;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+header .nav .nav-content li {
+  margin-left: 2rem;
+}
+
+header .nav .nav-content .nav-portfolio a {
+  background-color: #e7615c;
+  padding: 0.1rem 0.5rem;
+  color: white;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  border: 2px solid #e7615c;
+}
+
+header .nav .nav-content .nav-portfolio a:hover {
+  box-shadow: 0px 0px 5px 2px rgba(231, 97, 92, 0.25);
+}
+
+.active {
+  border-bottom: 2px solid white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #4ca8c7;
+}
+
+.hero .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.bg-1 {
+  background-image: url("/source/img-large/1.png");
+}
+
+.bg-2 {
+  background-image: url("/source/img-large/2.png");
+}
+.bg-3 {
+  background-image: url("/source/img-large/3.png");
+}
+.bg-4 {
+  background-image: url("/source/img-large/4.png");
+  z-index: 5;
+  transform: translateY(0);
+}
+.bg-5 {
+  z-index: 1000;
+  background-image: url("/source/img-large/5.png");
+}
+
+.hero h1 {
+  font-size: 8rem;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  color: #fff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  line-height: 1;
+}
+
+.hero .ttl {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+
+.hero p {
+  color: #fff;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  /* text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); */
+  letter-spacing: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .bg {
+    background-size: contain;
+    background-position: top;
+  }
+  .nav-logo {
+    font-size: 16px;
+  }
+  header .nav .nav-content li a {
+    font-size: 9px;
+  }
+  header .nav .nav-content li {
+    margin-left: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
