@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,7 +50,7 @@ header {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   top: 0;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 header .nav {
@@ -93,16 +97,16 @@ main {
 }
 
 .title-carousel {
-  padding: 2rem 0;
   text-align: center;
 }
 
 .carousel {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
+  padding-top: 5rem;
 }
 
 .carousel .list {
@@ -128,6 +132,7 @@ main {
 }
 
 .carousel .list .item .item-img {
+  border-radius: 5px;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -149,7 +154,7 @@ main {
   color: white;
   font-family: "Konkhmer Sleokchher", sans-serif;
   overflow: visible;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .carousel .list .item .item-img .info h1 {
