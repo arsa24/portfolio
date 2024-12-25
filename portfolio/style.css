@@ -46,7 +46,7 @@ header {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, .8);
 }
 
 header .nav {
@@ -56,17 +56,13 @@ header .nav {
   align-items: center;
 }
 
-.nav .nav-logo {
-  color: white;
-}
-
 header .nav .nav-content {
-  font-family: "Konkhmer Sleokchher";
   display: flex;
   list-style: none;
 }
 header .nav .nav-content li a {
   text-decoration: none;
+  font-family: "Konkhmer Sleokchher", sans-serif;
   color: white;
   font-size: 14px;
 }
@@ -87,13 +83,13 @@ header .nav .nav-content .nav-portfolio a:hover {
   box-shadow: 0px 0px 5px 2px rgba(231, 97, 92, 0.25);
 }
 
+.active {
+  border-bottom: 2px solid white;
+}
+
 main {
   padding-top: 4rem;
   min-height: 100vh;
-}
-
-.item {
-  display: flex;
 }
 
 .title-carousel {
@@ -101,10 +97,34 @@ main {
   text-align: center;
 }
 
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .carousel .list {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.carousel .list .item {
+  flex: 0 0 auto;
+  width: 300px;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transform: scale(0.8);
+}
+
+.carousel .list .item.active {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1);
 }
 
 .carousel .list .item .item-img {
@@ -113,6 +133,8 @@ main {
   justify-content: center;
   width: 18rem;
   height: 25rem;
+  overflow: visible;
+  position: relative;
 }
 
 .carousel .list .item .item-img .info {
@@ -122,29 +144,40 @@ main {
     rgba(43, 43, 43, 0.5),
     rgba(225, 225, 225, 0.1)
   );
-  width: 18rem;
-  padding: 0.5rem 1rem;
+  width: 100%;
+  padding: 0.5rem;
   color: white;
   font-family: "Konkhmer Sleokchher", sans-serif;
+  overflow: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .carousel .list .item .item-img .info h1 {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .carousel .list .item .item-img .info h3 {
-  font-size: 11px;
-  line-height: 1;
-  color: rgba(225, 225, 225, 0.6);
+  font-size: 12px;
+  color: rgba(225, 225, 225, 0.8);
 }
 
 .carousel .list .item .item-img .info p {
   font-size: 9px;
 }
 
+.carousel .list .item .item-img .info h3,
+.carousel .list .item .item-img .info p {
+  display: none;
+}
+
+.carousel .list .item.active .item-img .info h3,
+.carousel .list .item.active .item-img .info p {
+  display: block;
+}
+
 .carousel .list .item .item-img img {
-  width: 240px;
+  width: 100%;
 }
 
 .carousel .list .item .dev {
@@ -155,34 +188,71 @@ main {
   background-color: #f9b300;
 }
 
-.arrow svg {
-  position: absolute;
-  top: 50%;
-  margin: 0 2rem;
+@media screen and (max-width: 768px) {
+  header .nav .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav .nav-content li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel .list .item {
+    width: 200px;
+  }
+
+  .carousel .list .item .item-img {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  .carousel .list .item .item-img .info h1 {
+    font-size: 0.9rem;
+  }
+
+  .carousel .list .item .item-img .info h3 {
+    font-size: 0.8rem;
+  }
+
+  .carousel .list .item .item-img .info p {
+    font-size: 0.7rem;
+  }
 }
-
-.arrow svg:nth-child(1) {
-  left: 0;
-}
-
-.arrow svg:nth-child(2) {
-  right: 0;
-}
-
-
 
 @media screen and (max-width: 768px) {
-    .hero .bg {
-      background-size: contain;
-      background-position: top;
-    }
-    .nav-logo {
-      font-size: 16px;
-    }
-    header .nav .nav-content li a {
-      font-size: 9px;
-    }
-    header .nav .nav-content li {
-      margin-left: 1rem;
-    }
+  .hero .bg {
+    background-size: contain;
+    background-position: top;
   }
+  .nav-logo {
+    font-size: 16px;
+  }
+  header .nav .nav-content li a {
+    font-size: 9px;
+  }
+  header .nav .nav-content li {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel .list .item {
+    width: 150px;
+  }
+
+  .carousel .list .item .item-img {
+    width: 12rem;
+    height: 15rem;
+  }
+
+  .carousel .list .item .item-img .info h1 {
+    font-size: 0.8rem;
+  }
+
+  .carousel .list .item .item-img .info h3,
+  .carousel .list .item .item-img .info p {
+    font-size: 0.6rem;
+  }
+}
