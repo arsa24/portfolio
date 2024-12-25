@@ -168,3 +168,21 @@ main {
 .arrow svg:nth-child(2) {
   right: 0;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .hero .bg {
+      background-size: contain;
+      background-position: top;
+    }
+    .nav-logo {
+      font-size: 16px;
+    }
+    header .nav .nav-content li a {
+      font-size: 9px;
+    }
+    header .nav .nav-content li {
+      margin-left: 1rem;
+    }
+  }
