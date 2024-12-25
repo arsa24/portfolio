@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -60,23 +56,29 @@ header .nav {
   align-items: center;
 }
 
+.nav .nav-logo {
+  color: white;
+}
+
 header .nav .nav-content {
+  font-family: "Konkhmer Sleokchher";
   display: flex;
   list-style: none;
 }
+
 header .nav .nav-content li a {
   text-decoration: none;
-  font-family: "Konkhmer Sleokchher", sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 1rem;
 }
+
 header .nav .nav-content li {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 header .nav .nav-content .nav-portfolio a {
   background-color: #e7615c;
-  padding: 0.1rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   color: white;
   border-radius: 7px;
   transition: all 0.3s ease;
@@ -87,26 +89,22 @@ header .nav .nav-content .nav-portfolio a:hover {
   box-shadow: 0px 0px 5px 2px rgba(231, 97, 92, 0.25);
 }
 
-.active {
-  border-bottom: 2px solid white;
-}
-
 main {
   padding-top: 4rem;
   min-height: 100vh;
 }
 
 .title-carousel {
+  padding: 2rem 0;
   text-align: center;
 }
 
 .carousel {
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 5rem;
 }
 
 .carousel .list {
@@ -132,7 +130,6 @@ main {
 }
 
 .carousel .list .item .item-img {
-  border-radius: 5px;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -140,6 +137,7 @@ main {
   height: 25rem;
   overflow: visible;
   position: relative;
+  border-radius: 6px;
 }
 
 .carousel .list .item .item-img .info {
@@ -154,7 +152,7 @@ main {
   color: white;
   font-family: "Konkhmer Sleokchher", sans-serif;
   overflow: visible;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .carousel .list .item .item-img .info h1 {
@@ -226,22 +224,6 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .hero .bg {
-    background-size: contain;
-    background-position: top;
-  }
-  .nav-logo {
-    font-size: 16px;
-  }
-  header .nav .nav-content li a {
-    font-size: 9px;
-  }
-  header .nav .nav-content li {
-    margin-left: 1rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .carousel .list .item {
     width: 150px;
@@ -256,8 +238,10 @@ main {
     font-size: 0.8rem;
   }
 
-  .carousel .list .item .item-img .info h3,
+  .carousel .list .item .item-img .info h3 {
+    font-size: 0.5rem;
+  }
   .carousel .list .item .item-img .info p {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
 }
