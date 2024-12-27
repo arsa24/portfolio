@@ -8,6 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* loading */
+
 .loading {
   position: fixed;
   top: 0;
@@ -39,6 +41,8 @@ html {
   }
 }
 
+/* navbar */
+
 header {
   position: fixed;
   z-index: 1001;
@@ -61,7 +65,7 @@ header .nav {
 }
 
 header .nav .nav-content {
-  font-family: "Konkhmer Sleokchher";
+  font-family: "Konkhmer Sleokchher", sans-serif;
   display: flex;
   list-style: none;
 }
@@ -89,14 +93,71 @@ header .nav .nav-content .nav-portfolio a:hover {
   box-shadow: 0px 0px 5px 2px rgba(231, 97, 92, 0.25);
 }
 
+/* modal */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+}
+
+.modal-icon {
+  background-color: #e96371;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.modal .modal-content {
+  background-color: #fff;
+  width: 80%;
+  gap: 12px;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hidden-modal {
+  display: none;
+}
+
+.modal .modal-content p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.modal .modal-content button {
+  width: 90%;
+  padding: 0.5rem 0;
+  margin: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #efb918;
+  border-radius: 6px;
+}
+
+/* main */
 main {
-  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
 .title-carousel {
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .carousel {
@@ -117,6 +178,7 @@ main {
 .carousel .list .item {
   flex: 0 0 auto;
   width: 300px;
+  height: 390px;
   transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
   opacity: 0.5;
   filter: grayscale(100%);
@@ -133,11 +195,20 @@ main {
   display: flex;
   align-items: end;
   justify-content: center;
-  width: 18rem;
-  height: 25rem;
-  overflow: visible;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   position: relative;
-  border-radius: 6px;
+  border-radius: 8px;
+}
+
+.carousel .list .item .item-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .carousel .list .item .item-img .info {
@@ -153,6 +224,7 @@ main {
   font-family: "Konkhmer Sleokchher", sans-serif;
   overflow: visible;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  border-radius: 0 0 8px 8px;
 }
 
 .carousel .list .item .item-img .info h1 {
@@ -165,17 +237,27 @@ main {
   color: rgba(225, 225, 225, 0.8);
 }
 
-.carousel .list .item .item-img .info p {
+/* .carousel .list .item .item-img .info p {
   font-size: 9px;
+} */
+
+.carousel .list .item.active .item-img .info .btn-portfolio button {
+  width: 100%;
+  padding: 0.3rem 0;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Konkhmer Sleokchher", sans-serif;
 }
 
 .carousel .list .item .item-img .info h3,
-.carousel .list .item .item-img .info p {
+.carousel .list .item .item-img .info a {
   display: none;
 }
 
 .carousel .list .item.active .item-img .info h3,
-.carousel .list .item.active .item-img .info p {
+.carousel .list .item.active .item-img .info a {
   display: block;
 }
 
@@ -187,8 +269,26 @@ main {
   background-color: #193fff;
 }
 
+.carousel .list .item .dev .info .btn-portfolio button {
+  background-color: #193fff;
+  box-shadow: 0 0 12px rgba(25, 63, 255, 0.6);
+}
+
+.carousel .list .item .ui {
+  background-color: #f90053;
+}
+.carousel .list .item .ui .info .btn-portfolio button {
+  background-color: #f90053;
+  box-shadow: 0 0 12px rgba(249, 0, 83, 0.6);
+}
+
 .carousel .list .item .illust {
   background-color: #f9b300;
+}
+
+.carousel .list .item .illust .info .btn-portfolio button {
+  background-color: #f9b300;
+  box-shadow: 0 0 12px rgba(249, 179, 0, 0.6);
 }
 
 @media screen and (max-width: 768px) {
@@ -207,7 +307,7 @@ main {
   }
 
   .carousel .list .item .item-img {
-    width: 15rem;
+    width: 100%;
     height: 20rem;
   }
 
@@ -224,13 +324,18 @@ main {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .carousel .list .item {
     width: 150px;
   }
 
   .carousel .list .item .item-img {
-    width: 12rem;
     height: 15rem;
   }
 

@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css?family=Konkhmer Sleokchher"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="loading">
@@ -21,11 +27,49 @@
       <div class="nav">
         <h1 class="nav-logo">logo</h1>
         <ul class="nav-content">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="nav-portfolio"><a href="/portfolio/index.html">Portfolio</a></li>
+          <li id="close">
+            <svg
+              onclick="closeNav()"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </li>
+          <li>
+            <a href="#hero"> Home</a>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="nav-portfolio">
+            <a href="/portfolio">Portfolio</a>
+          </li>
         </ul>
+        <div class="toggle" onclick="openNav()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffff"
+          >
+            <path
+              d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"
+            />
+          </svg>
+        </div>
       </div>
     </header>
     <section id="hero">
@@ -34,7 +78,7 @@
         <div class="bg bg-5"></div>
         <div class="ttl">
           <h1>PORTFOLIO</h1>
-          <p>PROGRAM BY ARSA & ILLUSTRATION BY IPAY</p>
+          <p>PORTFOLIO DARI BEBERAPA MURID WIBAL</p>
         </div>
         <div class="bg bg-2"></div>
         <div class="bg bg-3"></div>
@@ -42,22 +86,55 @@
       </div>
     </section>
     <section id="about">
-      <h1>About Us</h1>
+      <div class="about-left">
+        <img src="./source/pulau.svg" alt="" />
+      </div>
+      <div class="about-right">
+        <h1>About Us</h1>
+        <h3>Tentang kami</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, dolore natus, aspernatur soluta quod dolor nam,
+          voluptate at asperiores exercitationem commodi. Ab obcaecati,
+          cupiditate nisi laboriosam earum culpa maxime commodi fugiat voluptas
+          incidunt deleniti voluptates ducimus laudantium non. Deserunt, ea?
+        </p>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="blog-header">
+        <h1>Our Blog</h1>
+        <p>Eksplore our latest updates,tips and stories</p>
+      </div>
+      <div class="blog-items">
+        <div class="blog-item">
+          <img src="./source/example.png" alt="" />
+          <h1>How to create....</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, id,
+            quod.
+          </p>
+        </div>
+        <div class="blog-item">
+          <img src="./source/example.png" alt="" />
+          <h1>How to create....</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, id,
+            quod.
+          </p>
+        </div>
+        <div class="blog-item">
+          <img src="./source/example.png" alt="" />
+          <h1>How to create....</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, id,
+            quod.
+          </p>
+        </div>
+      </div>
       <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid
-        quas totam, doloremque accusantium possimus repellendus laudantium porro
-        libero ducimus sequi quisquam blanditiis placeat repudiandae at ea
-        maxime reiciendis delectus! Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ipsa voluptas id consequuntur deleniti dolor, adipisci
-        fugit officia sequi eius? Repellendus autem quidem molestias in quo, ab
-        nihil illum hic nostrum doloremque aspernatur doloribus minus tenetur
-        corporis, quam, vel nobis iure veritatis quibusdam accusantium! Natus
-        debitis officiis laboriosam maiores quo aliquam ab tempora molestias
-        dolorem impedit, alias fuga fugiat magnam optio tempore libero hic error
-        in iusto velit aperiam tenetur autem. Animi laboriosam neque dolorem
-        esse harum! Reiciendis veniam, facilis ea voluptatum odit aspernatur
-        illo, modi error quos eaque perferendis incidunt. Quod facere
-        necessitatibus ad veritatis et earum aspernatur accusamus modi.
+        <a href=""><button>See More</button></a>
       </div>
     </section>
 
@@ -80,6 +157,7 @@
         necessitatibus ad veritatis et earum aspernatur accusamus modi.
       </div>
     </section>
+    <footer>This is footer</footer>
     <script src="script.js"></script>
   </body>
 </html>

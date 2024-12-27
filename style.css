@@ -65,6 +65,20 @@ header .nav .nav-content {
   display: flex;
   list-style: none;
 }
+
+header .nav .toggle {
+  display: none;
+}
+
+.nav .nav-logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  background: linear-gradient(to right, #06beb6, #48b1bf);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header .nav .nav-content li a {
   text-decoration: none;
   font-family: "Konkhmer Sleokchher", sans-serif;
@@ -73,6 +87,10 @@ header .nav .nav-content li a {
 }
 header .nav .nav-content li {
   margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 
 header .nav .nav-content .nav-portfolio a {
@@ -156,7 +174,8 @@ header .nav .nav-content .nav-portfolio a:hover {
 }
 
 #about,
-#contact {
+#contact,
+#blog {
   font-family: "Konkhmer Sleokchher", sans-serif;
   padding-top: 5rem;
   min-height: 100vh;
@@ -164,11 +183,43 @@ header .nav .nav-content .nav-portfolio a:hover {
 
 #about {
   background-color: #21241f;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+#about .about-left {
+  padding: 2rem 3rem;
+}
+
+#about .about-left img {
+  width: 340px;
+}
+
+#about .about-right h1,
+#about .about-right {
+  text-align: right;
+}
+
+#about .about-right {
+  color: rgba(225, 225, 225, 0.5);
 }
 
 #about h1 {
   color: white;
   text-align: center;
+}
+
+#blog {
+  padding: 0 2rem;
+}
+
+#blog .blog-items {
+display: grid;
+grid-template-columns: auto auto auto;
 }
 
 #contact h1 {
@@ -192,5 +243,95 @@ header .nav .nav-content .nav-portfolio a:hover {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  #about {
+    grid-template-columns: auto;
+  }
+
+  #about .about-left img {
+    width: 280px;
+  }
+
+  #about .about-right h1 {
+    font-size: 14px;
+  }
+
+  #about .about-right h3 {
+    font-size: 14px;
+  }
+
+  #about .about-right p {
+    font-size: 14px;
+  }
+}
+
+#close {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  header .nav .nav-content #close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  #about .about-left img {
+    width: 180px;
+  }
+
+  #about .about-right h1 {
+    font-size: 12px;
+  }
+
+  #about .about-right h3 {
+    font-size: 12px;
+  }
+
+  #about .about-right p {
+    font-size: 12px;
+  }
+
+  header .nav .nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 -5px 14px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    transform: translateX(1000px);
+    transition: all 0.3s ease;
+    height: 100vh;
+    gap: 16px;
+  }
+
+  header .nav .nav-content li a {
+    color: black;
+  }
+
+  header .nav .nav-content .nav-portfolio {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  header .nav .nav-content .nav-portfolio a {
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  header .nav .toggle {
+    display: block;
+  }
+
+  .active {
+    border-bottom: 2px solid black;
   }
 }
