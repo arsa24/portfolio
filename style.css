@@ -184,7 +184,6 @@ header .nav .nav-content .nav-portfolio a:hover {
 #about {
   background-color: #21241f;
   display: grid;
-  column-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
@@ -286,21 +285,21 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   .hero .bg {
-    background-size: contain;
+    background-size: cover;
     background-position: top;
   }
   .nav-logo {
     font-size: 16px;
   }
   header .nav .nav-content li a {
-    font-size: 9px;
+    font-size: 12px;
   }
   header .nav .nav-content li {
     margin-left: 1rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   #about {
@@ -308,7 +307,7 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   #about .about-left img {
-    width: 280px;
+    width: 300px;
   }
 
   #about .about-right h1 {
@@ -329,6 +328,10 @@ header .nav .nav-content .nav-portfolio a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
   header .nav .nav-content #close {
     display: flex;
     justify-content: flex-end;
@@ -342,7 +345,7 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   #about .about-left img {
-    width: 180px;
+    width: 240px;
   }
 
   #about .about-right h1 {
