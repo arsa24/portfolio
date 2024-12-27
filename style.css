@@ -215,18 +215,76 @@ header .nav .nav-content .nav-portfolio a:hover {
 
 #blog {
   padding: 0 2rem;
+  background-color: #21241f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#blog .blog-header {
+  padding: 4rem 0;
+  text-align: center;
+  color: #fff;
 }
 
 #blog .blog-items {
-display: grid;
-grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 16px;
+  justify-content: center;
 }
 
 #contact h1 {
   text-align: center;
 }
 
+#blog .blog-items .blog-item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+#blog .blog-items .blog-item div {
+  padding: 1rem;
+}
+
+#blog .blog-items .blog-item {
+  background-color: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-blog {
+  justify-self: center;
+  padding: 2rem 0;
+}
+
+.btn-blog a button {
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  padding: 0.5rem 3rem;
+  background: none;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+}
+
+#blog .blog-items .blog-item h1 {
+  font-size: 14px;
+}
+
+#blog .blog-items .blog-item p {
+  font-size: 12px;
+}
+
 @media screen and (max-width: 768px) {
+  #blog .blog-items {
+    grid-template-columns: auto;
+    row-gap: 16px;
+  }
+
   .hero .bg {
     background-size: contain;
     background-position: top;
@@ -277,6 +335,10 @@ grid-template-columns: auto auto auto;
     width: 100%;
     margin: 0;
     padding: 1rem;
+  }
+
+  #blog .blog-items .blog-item {
+    width: 20rem;
   }
 
   #about .about-left img {

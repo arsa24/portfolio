@@ -247,7 +247,7 @@ main {
   border: none;
   outline: none;
   border-radius: 3px;
-  color: #fff;
+  color: #000;
   font-family: "Konkhmer Sleokchher", sans-serif;
 }
 
@@ -269,7 +269,7 @@ main {
   background-color: #193fff;
 }
 
-.carousel .list .item .dev .info .btn-portfolio button {
+.carousel .list .item .dev .info .btn-portfolio button:hover {
   background-color: #193fff;
   box-shadow: 0 0 12px rgba(25, 63, 255, 0.6);
 }
@@ -277,7 +277,7 @@ main {
 .carousel .list .item .ui {
   background-color: #f90053;
 }
-.carousel .list .item .ui .info .btn-portfolio button {
+.carousel .list .item .ui .info .btn-portfolio button:hover {
   background-color: #f90053;
   box-shadow: 0 0 12px rgba(249, 0, 83, 0.6);
 }
@@ -286,7 +286,7 @@ main {
   background-color: #f9b300;
 }
 
-.carousel .list .item .illust .info .btn-portfolio button {
+.carousel .list .item .illust .info .btn-portfolio button:hover {
   background-color: #f9b300;
   box-shadow: 0 0 12px rgba(249, 179, 0, 0.6);
 }
