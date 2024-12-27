@@ -270,6 +270,7 @@ main {
 }
 
 .carousel .list .item .dev .info .btn-portfolio button:hover {
+  color: #fff;
   background-color: #193fff;
   box-shadow: 0 0 12px rgba(25, 63, 255, 0.6);
 }
@@ -278,6 +279,7 @@ main {
   background-color: #f90053;
 }
 .carousel .list .item .ui .info .btn-portfolio button:hover {
+  color: #fff;
   background-color: #f90053;
   box-shadow: 0 0 12px rgba(249, 0, 83, 0.6);
 }
@@ -287,6 +289,7 @@ main {
 }
 
 .carousel .list .item .illust .info .btn-portfolio button:hover {
+  color: #fff;
   background-color: #f9b300;
   box-shadow: 0 0 12px rgba(249, 179, 0, 0.6);
 }
@@ -303,12 +306,12 @@ main {
   }
 
   .carousel .list .item {
-    width: 200px;
+    width: 300px;
   }
 
   .carousel .list .item .item-img {
     width: 100%;
-    height: 20rem;
+    height: 24rem;
   }
 
   .carousel .list .item .item-img .info h1 {
@@ -332,11 +335,11 @@ main {
 
 @media screen and (max-width: 480px) {
   .carousel .list .item {
-    width: 150px;
+    width: 220px;
   }
 
   .carousel .list .item .item-img {
-    height: 15rem;
+    height: 18rem;
   }
 
   .carousel .list .item .item-img .info h1 {
