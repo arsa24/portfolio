@@ -279,6 +279,30 @@ header .nav .nav-content .nav-portfolio a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  /* hero section mobile */
+
+  .bg-1 {
+    background-image: url(/source/img-small/bg1.png);
+  }
+
+  .bg-2 {
+    background-image: url(/source/img-small/bg3.png);
+    z-index: 999;
+  }
+
+  .bg-3 {
+    background-image: url(/source/img-small/bg4.png);
+    z-index: 1000;
+  }
+
+  .bg-4 {
+    background: none;
+  }
+
+  .bg-5 {
+    background-image: url(/source/img-small/bg2.png);
+  }
+
   #blog .blog-items {
     grid-template-columns: auto;
     row-gap: 16px;

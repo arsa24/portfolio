@@ -72,11 +72,11 @@ window.addEventListener("scroll", () => {
 
   titleHero.style.transform = `translateY(${top / 2}px)`;
 
-  //   sections.forEach((e) => {
-  //     if(e.offsetTop - top < 550){
-  //         e.classList.add("active")
-  //     }else {
-  //         e.classList.remove("active")
-  //     }
-  //   })
+    // sections.forEach((e) => {
+    //   if(e.offsetTop - top < 550){
+    //       e.classList.add("active")
+    //   }else {
+    //       e.classList.remove("active")
+    //   }
+    // })
 });
