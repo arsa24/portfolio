@@ -278,6 +278,110 @@ header .nav .nav-content .nav-portfolio a:hover {
   font-size: 12px;
 }
 
+#contact {
+  background-color: #21241f;
+}
+
+.contact-header {
+  width: 50%;
+  justify-self: center;
+}
+
+.contact-header p,
+.contact-header h1,
+.contact-item p,
+.contact-item h3,
+.contact-item h1 {
+  color: white;
+}
+
+.contact-header p {
+  font-size: 12px;
+}
+
+.contact-item h3 {
+  font-size: 14px;
+}
+
+#contact .contact-conteiner .contact-item p {
+  font-size: 10px;
+  color: #fff;
+}
+
+#contact .contact-conteiner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 120px 24px 120px;
+  gap: 32px;
+  margin: 42px 0;
+}
+
+.contact-info {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.info-icon {
+  display: flex;
+  background-color: #e7615c;
+  padding: 6px;
+  border-radius: 50px;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-item div h3 {
+  font-size: 12px;
+}
+
+.info-item {
+  text-decoration: none;
+}
+
+.contact-send h1 {
+  color: #000;
+}
+
+.contact-send {
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 12px;
+}
+
+.contact-send form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.contact-send form input,
+.contact-send form textarea {
+  border: none;
+  background: none;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+  outline: none;
+  color: #000;
+}
+
+.contact-send form button {
+  padding: 12px 0;
+  border-radius: 25px;
+  border: none;
+  background-color: #e7615c;
+  color: #fff;
+  font-weight: 700;
+  width: calc(100% / 3);
+}
+
 @media screen and (max-width: 768px) {
   /* hero section mobile */
 
@@ -344,6 +448,15 @@ header .nav .nav-content .nav-portfolio a:hover {
 
   #about .about-right p {
     font-size: 14px;
+  }
+
+  #contact .contact-conteiner {
+    grid-template-columns: auto;
+  }
+
+  #contact .contact-conteiner {
+    padding: 0 3rem 24px 3rem;
+
   }
 }
 
