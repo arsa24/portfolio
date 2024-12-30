@@ -455,8 +455,12 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   #contact .contact-conteiner {
-    padding: 0 3rem 24px 3rem;
+    padding: 0 2rem 24px 2rem;
+  }
 
+  #contact .contact-header p {
+    font-size: 10px;
+    text-align: center;
   }
 }
 
