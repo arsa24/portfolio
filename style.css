@@ -462,6 +462,10 @@ header .nav .nav-content .nav-portfolio a:hover {
     font-size: 10px;
     text-align: center;
   }
+
+  .contact-header {
+    width: 90%;
+  }
 }
 
 #close {
