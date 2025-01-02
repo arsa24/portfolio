@@ -129,23 +129,23 @@ header .nav .nav-content .nav-portfolio a:hover {
 }
 
 .bg-1 {
-  background-image: url("/source/img-large/1.png");
+  background-image: url("./source/img-large/1.png");
 }
 
 .bg-2 {
-  background-image: url("/source/img-large/2.png");
+  background-image: url("./source/img-large/2.png");
 }
 .bg-3 {
-  background-image: url("/source/img-large/3.png");
+  background-image: url("./source/img-large/3.png");
 }
 .bg-4 {
-  background-image: url("/source/img-large/4.png");
+  background-image: url("./source/img-large/4.png");
   z-index: 5;
   transform: translateY(0);
 }
 .bg-5 {
   z-index: 1000;
-  background-image: url("/source/img-large/5.png");
+  background-image: url("./source/img-large/5.png");
 }
 
 .hero h1 {
@@ -386,16 +386,16 @@ header .nav .nav-content .nav-portfolio a:hover {
   /* hero section mobile */
 
   .bg-1 {
-    background-image: url(/source/img-small/bg1.png);
+    background-image: url("./source/img-small/bg1.png");
   }
 
   .bg-2 {
-    background-image: url(/source/img-small/bg3.png);
+    background-image: url("./source/img-small/bg3.png");
     z-index: 999;
   }
 
   .bg-3 {
-    background-image: url(/source/img-small/bg4.png);
+    background-image: url("./source/img-small/bg4.png");
     z-index: 1000;
   }
 
@@ -404,7 +404,7 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   .bg-5 {
-    background-image: url(/source/img-small/bg2.png);
+    background-image: url("./source/img-small/bg2.png");
   }
 
   #blog .blog-items {
