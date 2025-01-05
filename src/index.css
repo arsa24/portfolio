@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +16,10 @@ html {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  background-color: #21241f;
 }
 
 .loading {
@@ -129,23 +137,23 @@ header .nav .nav-content .nav-portfolio a:hover {
 }
 
 .bg-1 {
-  background-image: url("./source/img-large/1.png");
+  background-image: url("./assets/img-large/1.png");
 }
 
 .bg-2 {
-  background-image: url("./source/img-large/2.png");
+  background-image: url("./assets/img-large/2.png");
 }
 .bg-3 {
-  background-image: url("./source/img-large/3.png");
+  background-image: url("./assets/img-large/3.png");
 }
 .bg-4 {
-  background-image: url("./source/img-large/4.png");
+  background-image: url("./assets/img-large/4.png");
   z-index: 5;
   transform: translateY(0);
 }
 .bg-5 {
   z-index: 1000;
-  background-image: url("./source/img-large/5.png");
+  background-image: url("./assets/img-large/5.png");
 }
 
 .hero h1 {
@@ -299,6 +307,13 @@ header .nav .nav-content .nav-portfolio a:hover {
   font-size: 12px;
 }
 
+.contact-p {
+  color: #000;
+  padding: 12px 0;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
 .contact-item h3 {
   font-size: 14px;
 }
@@ -382,20 +397,29 @@ header .nav .nav-content .nav-portfolio a:hover {
   width: calc(100% / 3);
 }
 
+footer {
+  background-color: #21241f;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  padding: 2rem 0 1rem 0;
+}
+
 @media screen and (max-width: 768px) {
   /* hero section mobile */
 
   .bg-1 {
-    background-image: url("./source/img-small/bg1.png");
+    background-image: url("./assets/img-small/bg1.png");
   }
 
   .bg-2 {
-    background-image: url("./source/img-small/bg3.png");
+    background-image: url("./assets/img-small/bg3.png");
     z-index: 999;
   }
 
   .bg-3 {
-    background-image: url("./source/img-small/bg4.png");
+    background-image: url("./assets/img-small/bg4.png");
     z-index: 1000;
   }
 
@@ -404,7 +428,7 @@ header .nav .nav-content .nav-portfolio a:hover {
   }
 
   .bg-5 {
-    background-image: url("./source/img-small/bg2.png");
+    background-image: url("./assets/img-small/bg2.png");
   }
 
   #blog .blog-items {
