@@ -22,8 +22,8 @@ const Home = () => {
           opacity: 1,
           x: 0,
           skewX: 0,
-          duration: 1,
-          delay: 0.5,
+          duration: 0.5,
+          delay: 0.3,
           scrollTrigger: {
             trigger: title,
             start: "top 80%",
@@ -35,28 +35,28 @@ const Home = () => {
     });
 
     gsap.utils.toArray(".text-section").forEach((p) => {
-        gsap.fromTo(
-          p,
-          {
-            opacity: 0,
-            x: 150,
-            skewX: 30,
+      gsap.fromTo(
+        p,
+        {
+          opacity: 0,
+          x: 150,
+          skewX: 30,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          skewX: 0,
+          duration: 0.5,
+          delay: 0.3,
+          scrollTrigger: {
+            trigger: p,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
           },
-          {
-            opacity: 1,
-            x: 0,
-            skewX: 0,
-            duration: 1,
-            delay: 0.5,
-            scrollTrigger: {
-              trigger: p,
-              start: "top 80%",
-              end: "top 30%",
-              scrub: true,
-            },
-          }
-        );
-      });
+        }
+      );
+    });
   }, []);
 
   return (

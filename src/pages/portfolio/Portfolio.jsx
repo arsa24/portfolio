@@ -63,7 +63,7 @@ const Portfolio = () => {
         <div className="list">
           <div className="item">
             <div className="item-img dev">
-              <img src={dev} alt="" />
+              <img className="character" src={dev} alt="" />
               <div className="info">
                 <h1>Arij Sahmawan</h1>
                 <h3>Developer</h3>
@@ -75,7 +75,7 @@ const Portfolio = () => {
           </div>
           <div className="item">
             <div className="item-img ui">
-              <img src={ui} alt="" />
+              <img className="character" src={ui} alt="" />
               <div className="info">
                 <h1>Anisa Rahmawati</h1>
                 <h3>UI/UX Designer</h3>
@@ -87,7 +87,7 @@ const Portfolio = () => {
           </div>
           <div className="item">
             <div className="item-img illust">
-              <img src={illust} alt="" />
+              <img className="character" src={illust} alt="" />
               <div className="info">
                 <h1>Muhammad Rifa</h1>
                 <h3>Illurtrator & Designer</h3>
