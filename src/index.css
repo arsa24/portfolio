@@ -569,3 +569,8 @@ footer {
     border-bottom: 2px solid black;
   }
 }
+
+
+.bg-docs {
+  background: url("./assets/docs-bg.png");
+}

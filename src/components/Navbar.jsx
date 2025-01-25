@@ -1,21 +1,7 @@
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  gsap.registerPlugin(useGSAP);
-  useGSAP(() => {
-    gsap.from(".nav-logo", {
-      opacity: 0,
-      x: 0,
-      duration: .3,
-      delay: .5,
-      stagger: {
-        amount: 1,
-      },
-    });
-  });
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const links = document.querySelectorAll(".nav-content li a");
@@ -95,6 +81,9 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#docs">Documentation</a>
           </li>
           <li className="nav-portfolio">
             <Link to="/portfolio">Portfolio</Link>
