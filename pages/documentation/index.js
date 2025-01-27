@@ -6,14 +6,17 @@ import { Rubik, Archivo } from "next/font/google";
 
 const rubikMedium = Rubik({
   weight: "500",
+  subsets: ["latin"]
 });
 
 const archive500 = Archivo({
   weight: "500",
+  subsets: ["latin"],
 });
 
 const archive700 = Archivo({
   weight: "700",
+  subsets: ["latin"],
 });
 
 const index = () => {

@@ -3,10 +3,12 @@ import { Rubik } from "next/font/google";
 
 const rubikMedium = Rubik({
   weight: "500",
+  subsets: ["latin"],
 });
 
 const rubik400 = Rubik({
   weight: "400",
+  subsets: ["latin"],
 });
 
 const description = "";
