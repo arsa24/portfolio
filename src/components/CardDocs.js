@@ -25,7 +25,7 @@ const CardDocs = ({ img, title, date, path }) => {
           style={{ backgroundImage: `url(${img})` }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h3 className="text-white text-lg font-bold">Hari ke-{title}</h3>
+            <h3 className="text-white text-lg font-bold">{title}</h3>
           </div>
         </div>
 
