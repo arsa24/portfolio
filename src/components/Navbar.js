@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react"; // Ikon dari Lucide
+import { Moon, Sun } from "lucide-react"; 
 import Link from "next/link";
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Cek apakah sebelumnya sudah ada preferensi mode di localStorage
     const savedMode = localStorage.getItem("theme");
     if (savedMode === "dark") {
       setDarkMode(true);
@@ -32,12 +31,10 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-gray-100 dark:bg-primary-dark shadow-md py-4 absolute top-0">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6">
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white">
           ThreeWorks
         </Link>
 
-        {/* Tombol Dark Mode */}
         <button
           onClick={toggleTheme}
           className="p-2 rounded-md bg-gray-300 dark:bg-secondary hover:bg-gray-400 dark:hover:bg-[#e6307c] transition"

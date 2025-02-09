@@ -1,36 +1,7 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
-
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-
-    if (newMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
 
   return (
     <div className="min-h-screen bg-primary-light text-text-light dark:bg-primary-dark dark:text-text-dark">
-
-      {/* Hero Section */}
       <section className="h-screen flex items-center px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div className="flex flex-col justify-center">
@@ -47,7 +18,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Our Team */}
       <section id="team" className="py-16 px-6 text-center">
         <h2 className="text-4xl font-extrabold">Meet Our Team</h2>
         <p className="text-gray-500 dark:text-gray-400 mt-3">Kami adalah murid SMK Wira Informatika Global yang sedang belajar dan berkembang.</p>
@@ -66,7 +36,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Project */}
       <section id="projects" className="py-16 px-6 text-center bg-gray-300 dark:bg-gray-800">
         <h2 className="text-4xl font-extrabold">Our Project</h2>
         <p className="text-gray-600 dark:text-gray-400 mt-3">Salah satu proyek unggulan yang telah kami kerjakan.</p>
@@ -82,7 +51,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-800 text-white py-10 px-6 text-center">
         <h3 className="text-xl md:text-2xl font-bold">Get in Touch</h3>
         <p className="text-gray-400 mt-2">Kami siap membantu proyek digital Anda!</p>
