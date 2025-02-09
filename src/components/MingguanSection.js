@@ -22,7 +22,7 @@ const MingguanSection = () => {
     <div className="space-y-10">
       {week.map((e, i) => (
         <div key={i}>
-          <h3 className="text-lg font-bold text-gray-800 mb-4">
+          <h3 className="font-bold text-gray-800 mb-4 md:text-lg text-base">
             Minggu {Number(e.minggu) === 1 ? "pertama" : `ke-${e.minggu}`}
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
