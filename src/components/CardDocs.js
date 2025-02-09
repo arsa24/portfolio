@@ -30,8 +30,8 @@ const CardDocs = ({ img, title, date, path }) => {
         </div>
 
         <div className={`p-4 bg-white ${rubik400.className}`}>
-          <h4 className="text-gray-800 font-semibold">
-            Tanggal: {date + "-2025"}
+          <h4 className="text-gray-800 font-semibold text-[14px]">
+            Tanggal: <span className="font-medium">{date}</span>
           </h4>
           <p className="text-gray-600 text-sm mb-2">{description}</p>
           <ul className="text-gray-700 text-sm">
