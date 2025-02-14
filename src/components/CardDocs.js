@@ -64,10 +64,10 @@ const CardDocs = ({ img, title, date, path }) => {
               </svg>
             </button>
             <h2 className={`text-xl font-bold mb-4 ${rubikMedium.className}`}>
-              Detail Hari ke-{title}
+              {title}
             </h2>
             <p className="text-gray-700 mb-4">
-              Tanggal: {date + "-2025"}
+              Tanggal: {date}
               <br />
               Deskripsi: {description || "Deskripsi tidak tersedia."}
             </p>
